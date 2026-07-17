@@ -1,0 +1,52 @@
+.future-avatar {
+  --future-avatar-size: 184px;
+  display: inline-grid;
+  width: var(--future-avatar-size);
+  aspect-ratio: 166 / 184;
+  color: #b5eaff;
+  isolation: isolate;
+  line-height: 0;
+}
+
+.future-avatar--sm { --future-avatar-size: 52px; }
+.future-avatar--md { --future-avatar-size: 184px; }
+.future-avatar--lg { --future-avatar-size: 280px; }
+.future-avatar svg { width: 100%; height: auto; overflow: visible; }
+.future-avatar__aura { mix-blend-mode: screen; }
+.future-avatar__contour { fill: none; stroke: #5fbaf4; stroke-linecap: round; stroke-width: 1.2; opacity: .5; }
+.future-avatar__contour--outer { stroke-dasharray: 3 5; opacity: .31; }
+.future-avatar__horizon { fill: none; stroke-linecap: round; stroke-width: 1.4; opacity: .9; }
+.future-avatar__abaya { fill: #08244d; stroke: #70caff; stroke-opacity: .3; stroke-width: 1.15; }
+.future-avatar__hijab-back, .future-avatar__hijab-frame, .future-avatar__hijab-drape { stroke: #72cfff; stroke-opacity: .22; stroke-width: 1; }
+.future-avatar__hijab-rim { fill: none; stroke: #8ad9ff; stroke-linecap: round; stroke-width: 1.45; opacity: .72; }
+.future-avatar__hijab-fold { fill: none; stroke: #5f9bd4; stroke-linecap: round; stroke-width: 1.2; opacity: .46; }
+.future-avatar__face { stroke: #a95f56; stroke-opacity: .35; stroke-width: .8; }
+.future-avatar__brow { fill: none; stroke: #27325e; stroke-linecap: round; stroke-width: 2.8; }
+.future-avatar__eye { fill: #f9fcff; }
+.future-avatar__eye-line { fill: none; stroke: #3c426a; stroke-linecap: round; stroke-width: .85; opacity: .74; }
+.future-avatar__pupil { fill: #13376e; }
+.future-avatar__cheek { fill: #e98086; mix-blend-mode: multiply; }
+.future-avatar__jaw { fill: none; stroke: #b56f62; stroke-linecap: round; stroke-width: .9; opacity: .45; }
+.future-avatar__nose { fill: none; stroke: #ad695c; stroke-linecap: round; stroke-width: 1.2; }
+.future-avatar__mouth { fill: none; stroke: #8d3e58; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.1; }
+.future-avatar__lid { fill: none; stroke: #b56f62; stroke-linecap: round; stroke-width: 1.5; }
+.future-avatar__confetti { fill: #9eeaff; }
+.future-avatar__glint { fill: #c9f5ff; opacity: .88; }
+.future-avatar--glyph .future-avatar__aura { opacity: .72; }
+.future-avatar--glyph .future-avatar__contour { opacity: .35; }
+.future-avatar--glyph .future-avatar__horizon { opacity: .65; }
+.future-avatar--glyph .future-avatar__face { stroke-width: 1.35; }
+.future-avatar--glyph .future-avatar__hijab-back, .future-avatar--glyph .future-avatar__hijab-frame, .future-avatar--glyph .future-avatar__hijab-drape { stroke-width: 1.55; stroke-opacity: .4; }
+.future-avatar--glyph .future-avatar__brow { stroke-width: 3.5; }
+.future-avatar--glyph .future-avatar__eye-line { stroke-width: 1.35; opacity: .9; }
+.future-avatar--glyph .future-avatar__jaw { stroke-width: 1.25; }
+.future-avatar--glyph .future-avatar__mouth { stroke-width: 2.8; }
+.future-avatar--card { border-radius: 50%; background: radial-gradient(circle at 50% 38%, rgba(64, 159, 236, .27), rgba(6, 29, 76, .08) 68%, transparent 69%); }
+.future-avatar[data-speaking] .future-avatar__glint { animation: future-avatar-glint .58s ease-in-out infinite alternate; }
+.avatar-badge { vertical-align: middle; flex: 0 0 auto; }
+
+@keyframes future-avatar-glint { to { opacity: .36; transform: scale(.72); transform-origin: center; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .future-avatar[data-speaking] .future-avatar__glint { animation: none; }
+}
